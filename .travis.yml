@@ -31,6 +31,10 @@ jobs:
   fail_fast: true
   allow_failures:
     - env: EMBER_TRY_SCENARIO=ember-canary
+    # Until https://github.com/machty/ember-concurrency/pull/277 lands, or
+    # https://github.com/emberjs/ember.js/pull/17649 is released to the beta
+    # channel
+    - env: EMBER_TRY_SCENARIO=ember-beta
 
   include:
     # runs linting and tests with current locked deps
